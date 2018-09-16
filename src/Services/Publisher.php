@@ -11,18 +11,18 @@ class Publisher
     /**
      * @var Config
      */
-    protected  $config;
+    protected $config;
 
     /**
      * Crowdin object instance.
-     * 
+     *
      * @var Crowdin
      */
     protected $crowdin;
 
     /**
      * Create a new Publisher.
-     * 
+     *
      * @param \Illuminate\Config\Repository $config
      */
     public function __construct(Config $config)
@@ -36,8 +36,9 @@ class Publisher
 
     /**
      * Tell if this language is currently supported in crowdin project.
-     * 
+     *
      * @param string $language
+     *
      * @return bool
      */
     public function languageSupported($language) : bool
@@ -46,21 +47,20 @@ class Publisher
             $status = $this->crowdin->language->getStatus($language);
 
             return $status->getStatusCode() == 200;
-        }
-        catch (\Exception $e) {
+        } catch (\Exception $e) {
             return false;
         }
     }
 
     /**
-     * Upload files to crowdin
-     * 
-     * @param string $language
+     * Upload files to crowdin.
+     *
+     * @param string              $language
      * @param array[Languagefile] $files
      */
     public function upload($language, $files)
     {
-        foreach($files as $file) {
+        foreach ($files as $file) {
             $this->crowdin->translation->upload($file, $language);
         }
     }

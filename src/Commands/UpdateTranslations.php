@@ -4,7 +4,6 @@ namespace Gunther\Commands;
 
 use Gunther\Facades\Publisher;
 use Illuminate\Console\Command;
-use ElKuKu\Crowdin\Languagefile;
 use Gunther\Services\LangsService;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -40,14 +39,11 @@ class UpdateTranslations extends Command
                 continue;
             }
 
-            if (Publisher::languageSupported($language))
-            {
+            if (Publisher::languageSupported($language)) {
                 $this->info('Language "'.$language.'" supported', OutputInterface::VERBOSITY_VERBOSE);
                 $translations = $langsService->getTranslations($language);
                 $this->handleTranslations($language, $translations);
-            }
-            else
-            {
+            } else {
                 $this->info('Language "'.$language.'" is not yet supported', OutputInterface::VERBOSITY_VERBOSE);
             }
         }
