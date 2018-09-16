@@ -3,8 +3,8 @@
 namespace Gunther\Commands;
 
 use Gunther\Facades\Publisher;
-use Gunther\Services\LangsService;
 use Illuminate\Console\Command;
+use Gunther\Services\LangsService;
 use Symfony\Component\Console\Output\OutputInterface;
 
 class UpdateTranslations extends Command
@@ -55,7 +55,7 @@ class UpdateTranslations extends Command
             $this->info('Update locale file: '.$translation->getLocalPath().', crowdin file: '.$translation->getCrowdinPath(), OutputInterface::VERBOSITY_VERBOSE);
         }
 
-        if (!$this->option('dryrun)')) {
+        if (! $this->option('dryrun)')) {
             Publisher::upload($language, $translations);
         }
     }

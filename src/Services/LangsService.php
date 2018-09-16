@@ -3,8 +3,8 @@
 namespace Gunther\Services;
 
 use ElKuKu\Crowdin\Languagefile;
-use Illuminate\Config\Repository as Config;
 use Symfony\Component\Finder\Finder;
+use Illuminate\Config\Repository as Config;
 
 class LangsService
 {
@@ -32,7 +32,7 @@ class LangsService
     {
         $languages = $this->config->get('gunther.languages');
 
-        if (!is_array($languages)) {
+        if (! is_array($languages)) {
             $languages = explode(',', $languages);
         }
 

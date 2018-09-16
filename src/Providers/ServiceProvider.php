@@ -2,8 +2,8 @@
 
 namespace Gunther\Providers;
 
-use Gunther\Commands\UpdateTranslations;
 use Gunther\Services\Publisher;
+use Gunther\Commands\UpdateTranslations;
 use Illuminate\Config\Repository as Config;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
