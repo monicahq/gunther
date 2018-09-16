@@ -50,6 +50,10 @@ class LangsService
     {
         $sourcePath = base_path('vendor/caouecs/laravel-lang/src/'.$language);
 
+        if (! file_exists($sourcePath) && ! is_dir($sourcePath)) {
+            return;
+        }
+
         $iterator = Finder::create()
                 ->files()
                 ->in($sourcePath)

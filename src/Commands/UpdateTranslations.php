@@ -42,7 +42,9 @@ class UpdateTranslations extends Command
             if (Publisher::languageSupported($language)) {
                 $this->info('Language "'.$language.'" supported', OutputInterface::VERBOSITY_VERBOSE);
                 $translations = $langsService->getTranslations($language);
-                $this->handleTranslations($language, $translations);
+                if (! is_null($translations)) {
+                    $this->handleTranslations($language, $translations);
+                }
             } else {
                 $this->info('Language "'.$language.'" is not yet supported', OutputInterface::VERBOSITY_VERBOSE);
             }
