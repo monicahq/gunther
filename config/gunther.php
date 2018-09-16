@@ -8,6 +8,11 @@ return [
     'languages' => env('LANGUAGES', 'en'),
 
     /*
+     * Source language of the application.
+     */
+    'source_language' => env('SOURCE_LANGUAGE', 'en'),
+
+    /*
      * Crowdin api key.
      * See https://crowdin.com/project/{project_name}/settings#api
      */

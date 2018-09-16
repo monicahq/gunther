@@ -58,7 +58,7 @@ class LangsService
         $langs = [];
 
         foreach ($iterator as $file) {
-            $languageFile = $this->formatFile($language, $file->getRelativePathname(), $file->getPathname());
+            $languageFile = $this->formatFile($file->getRelativePathname(), $file->getPathname());
             array_push($langs, $languageFile);
         }
 
@@ -90,16 +90,15 @@ class LangsService
     /**
      * Format filename and path for specific language.
      *
-     * @param string $language Language of the file
      * @param string $fileName File name
      * @param string $filePath File path
      *
      * @return Languagefile
      */
-    public function formatFile($language, $fileName, $filePath) : Languagefile
+    public function formatFile($fileName, $filePath) : Languagefile
     {
         $resulting = $this->config->get('gunther.resulting_file');
-        $resulting = str_replace('%two_letters_code%', $language, $resulting);
+        $resulting = str_replace('%two_letters_code%', config('gunther.source_language'), $resulting);
         $resulting = str_replace('%original_file_name%', $fileName, $resulting);
 
         return new Languagefile($filePath, $resulting);
