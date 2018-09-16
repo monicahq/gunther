@@ -1,9 +1,9 @@
 {
     "name": "monicahq/gunther",
     "description": "Update Laravel translations on Crowdin",
-    "keywords": ["laravel", "crowdin"],
+    "keywords": ["laravel", "php", "crowdin", "language", "i18n"],
     "type": "library",
-    "license": "AGPL",
+    "license": "AGPL-3.0-or-later",
     "support": {
         "issues": "https://github.com/monicahq/gunther/issues",
         "source": "https://github.com/monicahq/gunther"
