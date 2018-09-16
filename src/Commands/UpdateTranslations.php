@@ -14,7 +14,7 @@ class UpdateTranslations extends Command
      *
      * @var string
      */
-    protected $signature = 'lang:update {--dryrun}';
+    protected $signature = 'lang:update {--dryrun : Simulate the execution but not write anything.}';
 
     /**
      * The console command description.
@@ -34,7 +34,7 @@ class UpdateTranslations extends Command
         $languages = $langsService->getLanguages();
 
         foreach ($languages as $language) {
-            if ($language == 'en') {
+            if ($language == config('gunther.source_language')) {
                 // Source language of Laravel, so skip it.
                 continue;
             }
@@ -55,7 +55,7 @@ class UpdateTranslations extends Command
             $this->info('Update locale file: '.$translation->getLocalPath().', crowdin file: '.$translation->getCrowdinPath(), OutputInterface::VERBOSITY_VERBOSE);
         }
 
-        if (! $this->option('dryrun)')) {
+        if (! $this->option('dryrun')) {
             Publisher::upload($language, $translations);
         }
     }
