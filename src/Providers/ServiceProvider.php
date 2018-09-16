@@ -2,8 +2,8 @@
 
 namespace Gunther\Providers;
 
-use Gunther\Services\Publisher;
 use Gunther\Commands\UpdateTranslations;
+use Gunther\Services\Publisher;
 use Illuminate\Config\Repository as Config;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
@@ -33,7 +33,7 @@ class ServiceProvider extends BaseServiceProvider
     public function register()
     {
         $app = $this->app;
-        $app->bind('gunther.publisher', function() use ($app) {
+        $app->bind('gunther.publisher', function () use ($app) {
             return new Publisher($app->make('config'));
         });
     }
@@ -45,7 +45,7 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function provides()
     {
-        return [ 'gunther.publisher' ];
+        return ['gunther.publisher'];
     }
 
     /**
