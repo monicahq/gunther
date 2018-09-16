@@ -1,0 +1,40 @@
+{
+    "name": "monicahq/gunther",
+    "description": "Update Laravel translations on Crowdin",
+    "keywords": ["laravel", "crowdin"],
+    "type": "library",
+    "license": "AGPL",
+    "support": {
+        "issues": "https://github.com/monicahq/gunther/issues",
+        "source": "https://github.com/monicahq/gunther"
+    },
+    "authors": [
+        {
+            "name": "Alexis Saettler",
+            "email": "alexis@saettler.org"
+        }
+    ],
+    "require": {
+        "caouecs/laravel-lang": "^3.0",
+        "elkuku/crowdin-api": "^2.0",
+        "laravel/framework": "^5.6",
+        "umpirsky/locale-list": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gunther\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Gunther\\Providers\\ServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
