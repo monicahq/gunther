@@ -13,8 +13,8 @@ class LangsServiceTest extends TestCase
         $service = new LangsService(new Config());
 
         $this->assertThat(
-			$service,
-			$this->isInstanceOf('Gunther\Services\LangsService')
-		);
+            $service,
+            $this->isInstanceOf('Gunther\Services\LangsService')
+        );
     }
 }
