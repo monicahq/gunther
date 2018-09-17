@@ -46,7 +46,7 @@ class LangsService
      *
      * @return array[Languagefile]
      */
-    public function getTranslations($language): array
+    public function getTranslations($language)
     {
         $sourcePath = base_path('vendor/caouecs/laravel-lang/src/'.$language);
 
