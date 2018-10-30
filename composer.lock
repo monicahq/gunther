@@ -1,23 +1,23 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "041eb91ae351f683a00d64bdb29406e1",
     "packages": [
         {
             "name": "caouecs/laravel-lang",
-            "version": "3.0.54",
+            "version": "3.0.56",
             "source": {
                 "type": "git",
                 "url": "https://github.com/caouecs/Laravel-lang.git",
-                "reference": "eaa1e26eb643d7fc696d410b45e55290143e1f7f"
+                "reference": "c918695532b0b61a34059399c617c9695b4ef536"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caouecs/Laravel-lang/zipball/eaa1e26eb643d7fc696d410b45e55290143e1f7f",
-                "reference": "eaa1e26eb643d7fc696d410b45e55290143e1f7f",
+                "url": "https://api.github.com/repos/caouecs/Laravel-lang/zipball/c918695532b0b61a34059399c617c9695b4ef536",
+                "reference": "c918695532b0b61a34059399c617c9695b4ef536",
                 "shasum": ""
             },
             "require-dev": {
@@ -25,6 +25,7 @@
             },
             "suggest": {
                 "ablunier/laravel-lang-installer": "Command for easily add languages to a Laravel project",
+                "andrey-helldar/laravel-lang-publisher": "Easy installation and update of translation files for your project",
                 "arcanedev/laravel-lang": "Translations manager and checker for Laravel 5",
                 "overtrue/laravel-lang": "Command to add languages in your project"
             },
@@ -46,7 +47,7 @@
                 "laravel",
                 "lpm"
             ],
-            "time": "2018-07-13T08:44:04+00:00"
+            "time": "2018-10-29T07:07:46+00:00"
         },
         {
             "name": "doctrine/inflector",
