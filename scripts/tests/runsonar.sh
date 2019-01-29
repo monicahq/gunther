@@ -128,7 +128,7 @@ elif [ -n "${BRANCH:-}" ] && [ "$PR_NUMBER" == "false" ] && [ -n "${SONAR_TOKEN:
   gitFetch
 
   SONAR_PARAMS="$(CommonParams) \
-    -Dsonar.projectVersion=$(php artisan monica:getversion)"
+    -Dsonar.projectVersion=$(git describe --abbrev=0 --tags --exact-match ${GIT_COMMIT} 2>/dev/null >/dev/null)"
 
   echo "# sonar-scanner $SONAR_PARAMS"
   $SONAR_SCANNER_HOME/bin/sonar-scanner $SONAR_PARAMS -Dsonar.login=$SONAR_TOKEN
@@ -178,5 +178,10 @@ elif [ "$PR_NUMBER" != "false" ] && [ -n "${SONAR_TOKEN:-}" ] && [ -n "${GITHUB_
   echo "# sonar-scanner $SONAR_PARAMS"
   $SONAR_SCANNER_HOME/bin/sonar-scanner $SONAR_PARAMS -Dsonar.login=$SONAR_TOKEN
   exit $?
+
+else
+  echo '======================'
+  echo '== SONAR:No analyze =='
+  echo '======================'
 
 fi
