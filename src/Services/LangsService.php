@@ -81,7 +81,10 @@ class LangsService
     {
         $sourcePath = base_path('vendor/umpirsky/locale-list/data/'.$language);
 
-        $sourceLocales = app('files')->getRequire($sourcePath.'/locales.php');
+        /** @var \Illuminate\Filesystem\Filesystem */
+        $files = app('files');
+
+        $sourceLocales = $files->getRequire($sourcePath.'/locales.php');
 
         $langs = [];
         foreach ($locales as $locale) {
