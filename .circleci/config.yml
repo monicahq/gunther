@@ -94,7 +94,6 @@ jobs:
       - checkout:
       - attach_workspace:
           at: *root
-      - *prepare-environment
       - restore_cache:
           keys:
             - *sonar_key
