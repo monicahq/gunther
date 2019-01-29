@@ -4,8 +4,8 @@ namespace Tests\Services;
 
 use Orchestra\Testbench\TestCase;
 use Gunther\Services\LangsService;
-use Illuminate\Config\Repository as Config;
 use Illuminate\Filesystem\Filesystem;
+use Illuminate\Config\Repository as Config;
 
 class LangsServiceTest extends TestCase
 {
@@ -91,5 +91,4 @@ class LangsServiceTest extends TestCase
         $this->assertNotNull($translations);
         $this->assertCount(0, $translations);
     }
-
 }
