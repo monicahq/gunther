@@ -18,7 +18,7 @@ aliases:
   - &unit-tests
     run:
       name: Run unit tests
-      command: phpdbg -dmemory_limit=4G -qrr vendor/bin/phpunit -c phpunit.xml --log-junit ./results/junit/unit/results.xml --coverage-clover ./results/coverage.xml
+      command: phpdbg -dmemory_limit=4G -qrr vendor/bin/phpunit -c phpunit.xml --log-junit ./results/results.xml --coverage-clover ./results/coverage.xml
   - &psalm
     run:
       name: Run psalm
@@ -105,7 +105,7 @@ jobs:
           name: Run sonar scanner
           command: |
             export SONAR_RESULT=./results/results.xml
-            export SONAR_COVERAGE=./results/coverage.xml,./results/coverage2.xml,./results/coverage3.xml
+            export SONAR_COVERAGE=./results/coverage.xml
             scripts/tests/runsonar.sh
 
       - save_cache:
@@ -126,7 +126,6 @@ workflows:
       - psalm:
           requires:
             - build
-
-#      - reporting:
-#          requires:
-#            - tests-7.2
+      - reporting:
+          requires:
+            - tests-7.2
