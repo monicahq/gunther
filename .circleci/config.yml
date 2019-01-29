@@ -7,6 +7,8 @@ aliases:
 # Some variables
   - &composer_key_base composer-v1-
   - &composer_key composer-v1-{{ checksum "composer.lock" }}
+  - &sonar_key_base sonarscanner-v1-
+  - &sonar_key sonarscanner-v1-{{ .Environment.SONAR_VERSION }}
   - &root ~/gunther
 
 # Defaults env
