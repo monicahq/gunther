@@ -81,7 +81,6 @@ class LangsService
     {
         $sourcePath = base_path('vendor/umpirsky/locale-list/data/'.$language);
 
-
         /** @var \Illuminate\Filesystem\Filesystem */
         $files = app('files');
 
