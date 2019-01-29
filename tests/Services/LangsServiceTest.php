@@ -14,9 +14,9 @@ class LangsServiceTest extends TestCase
         $service = new LangsService(new Config());
 
         $this->assertThat(
-			$service,
-			$this->isInstanceOf('Gunther\Services\LangsService')
-		);
+            $service,
+            $this->isInstanceOf('Gunther\Services\LangsService')
+        );
     }
 
     public function test_get_languages_default()
