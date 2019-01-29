@@ -51,7 +51,7 @@ class LangsService
         $sourcePath = base_path('vendor/caouecs/laravel-lang/src/'.$language);
 
         if (! file_exists($sourcePath) && ! is_dir($sourcePath)) {
-            return;
+            return [];
         }
 
         $iterator = Finder::create()
@@ -85,7 +85,10 @@ class LangsService
 
         $langs = [];
         foreach ($locales as $locale) {
-            $langs['locale_'.$locale] = $sourceLocales[$locale];
+            $translate = array_get($sourceLocales, $locale);
+            if ($translate) {
+                $langs['locale_'.$locale] = $translate;
+            }
         }
 
         return $langs;
