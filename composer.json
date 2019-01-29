@@ -40,6 +40,7 @@
     "prefer-stable": true,
     "require-dev": {
         "orchestra/testbench": "~3.0",
-        "phpunit/phpunit": "^7.3"
+        "phpunit/phpunit": "^7.3",
+        "vimeo/psalm": "^3.0"
     }
 }
