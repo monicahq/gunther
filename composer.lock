@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "caouecs/laravel-lang",
-            "version": "3.0.59",
+            "version": "3.0.60",
             "source": {
                 "type": "git",
                 "url": "https://github.com/caouecs/Laravel-lang.git",
-                "reference": "c74446c1253e2a48541cb6cc5d9e2ea008f16634"
+                "reference": "274e80d8ce28771fb56c77742b8b5d12bdc8fa21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caouecs/Laravel-lang/zipball/c74446c1253e2a48541cb6cc5d9e2ea008f16634",
-                "reference": "c74446c1253e2a48541cb6cc5d9e2ea008f16634",
+                "url": "https://api.github.com/repos/caouecs/Laravel-lang/zipball/274e80d8ce28771fb56c77742b8b5d12bdc8fa21",
+                "reference": "274e80d8ce28771fb56c77742b8b5d12bdc8fa21",
                 "shasum": ""
             },
             "require-dev": {
@@ -47,7 +47,7 @@
                 "laravel",
                 "lpm"
             ],
-            "time": "2018-11-22T19:30:58+00:00"
+            "time": "2019-03-07T18:23:30+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -2328,7 +2328,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "BackEndTea@gmail.com"
+                    "email": "backendtea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
