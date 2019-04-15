@@ -2,6 +2,7 @@
 
 namespace Gunther\Services;
 
+use Illuminate\Support\Arr;
 use ElKuKu\Crowdin\Languagefile;
 use Symfony\Component\Finder\Finder;
 use Illuminate\Config\Repository as Config;
@@ -88,7 +89,7 @@ class LangsService
 
         $langs = [];
         foreach ($locales as $locale) {
-            $translate = array_get($sourceLocales, $locale);
+            $translate = Arr::get($sourceLocales, $locale);
             if ($translate) {
                 $langs['locale_'.$locale] = $translate;
             }
