@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bfedad114a303fdb898e92ec7c564f0c",
+    "content-hash": "8ab845c1e4137e6f9ce94bea0c134643",
     "packages": [
         {
             "name": "caouecs/laravel-lang",
-            "version": "3.0.59",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/caouecs/Laravel-lang.git",
-                "reference": "c74446c1253e2a48541cb6cc5d9e2ea008f16634"
+                "reference": "c5e3d884c46d616db0a1cc9401feb8cb998eaeb4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caouecs/Laravel-lang/zipball/c74446c1253e2a48541cb6cc5d9e2ea008f16634",
-                "reference": "c74446c1253e2a48541cb6cc5d9e2ea008f16634",
+                "url": "https://api.github.com/repos/caouecs/Laravel-lang/zipball/c5e3d884c46d616db0a1cc9401feb8cb998eaeb4",
+                "reference": "c5e3d884c46d616db0a1cc9401feb8cb998eaeb4",
                 "shasum": ""
             },
             "require-dev": {
@@ -47,7 +47,7 @@
                 "laravel",
                 "lpm"
             ],
-            "time": "2018-11-22T19:30:58+00:00"
+            "time": "2019-03-27T20:34:54+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -2328,7 +2328,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "BackEndTea@gmail.com"
+                    "email": "backendtea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
