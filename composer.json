@@ -15,7 +15,7 @@
         }
     ],
     "require": {
-        "caouecs/laravel-lang": "^3.0",
+        "caouecs/laravel-lang": "^3.0 || ^4.0",
         "elkuku/crowdin-api": "^2.0",
         "laravel/framework": "^5.6",
         "umpirsky/locale-list": "^1.0"
