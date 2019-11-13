@@ -3,8 +3,8 @@
 namespace Gunther\Services;
 
 use ElKuKu\Crowdin\Languagefile;
-use Symfony\Component\Finder\Finder;
 use Illuminate\Config\Repository as Config;
+use Symfony\Component\Finder\Finder;
 
 class LangsService
 {
