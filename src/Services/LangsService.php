@@ -73,7 +73,7 @@ class LangsService
      * Get translations for the name of supported locales for the language.
      *
      * @param string        $language
-     * @param array<string> $locale
+     * @param array<string> $locales
      *
      * @return array<string, string>
      */
