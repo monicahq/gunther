@@ -4,6 +4,7 @@ namespace Gunther\Services;
 
 use ElKuKu\Crowdin\Crowdin;
 use ElKuKu\Crowdin\Languagefile;
+use GuzzleHttp\Client;
 use Illuminate\Config\Repository as Config;
 
 class Publisher
@@ -24,14 +25,15 @@ class Publisher
      * Create a new Publisher.
      *
      * @param \Illuminate\Config\Repository $config
+     * @param Client $client
      */
-    public function __construct(Config $config)
+    public function __construct(Config $config, Client $client = null)
     {
         $this->config = $config;
         if (empty($this->config->get('gunther.project')) || empty($this->config->get('gunther.apikey'))) {
             throw new \InvalidArgumentException('Please fill project and apikey in gunther.php');
         }
-        $this->crowdin = new Crowdin($this->config->get('gunther.project'), $this->config->get('gunther.apikey'));
+        $this->crowdin = new Crowdin($this->config->get('gunther.project'), $this->config->get('gunther.apikey'), 'https://api.crowdin.com/api/', $client);
     }
 
     /**
