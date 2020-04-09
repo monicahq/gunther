@@ -2,9 +2,9 @@
 
 namespace Gunther\Services;
 
-use GuzzleHttp\Client;
 use ElKuKu\Crowdin\Crowdin;
 use ElKuKu\Crowdin\Languagefile;
+use GuzzleHttp\Client;
 use Illuminate\Config\Repository as Config;
 
 class Publisher
