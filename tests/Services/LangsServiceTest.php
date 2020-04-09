@@ -2,11 +2,11 @@
 
 namespace Tests\Services;
 
-use Orchestra\Testbench\TestCase;
-use Gunther\Services\LangsService;
-use Illuminate\Filesystem\Filesystem;
-use Illuminate\Config\Repository as Config;
 use DMS\PHPUnitExtensions\ArraySubset\Assert;
+use Gunther\Services\LangsService;
+use Illuminate\Config\Repository as Config;
+use Illuminate\Filesystem\Filesystem;
+use Orchestra\Testbench\TestCase;
 
 class LangsServiceTest extends TestCase
 {

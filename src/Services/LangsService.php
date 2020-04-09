@@ -3,8 +3,8 @@
 namespace Gunther\Services;
 
 use ElKuKu\Crowdin\Languagefile;
-use Symfony\Component\Finder\Finder;
 use Illuminate\Config\Repository as Config;
+use Symfony\Component\Finder\Finder;
 
 class LangsService
 {
@@ -104,7 +104,7 @@ class LangsService
      *
      * @return Languagefile
      */
-    public function formatFile($fileName, $filePath) : Languagefile
+    public function formatFile($fileName, $filePath): Languagefile
     {
         $resulting = $this->config->get('gunther.resulting_file');
         $resulting = str_replace('%two_letters_code%', config('gunther.source_language'), $resulting);

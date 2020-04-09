@@ -41,7 +41,7 @@ class Publisher
      *
      * @return bool
      */
-    public function languageSupported($language) : bool
+    public function languageSupported($language): bool
     {
         try {
             $status = $this->crowdin->language->getStatus($language);

@@ -3,8 +3,8 @@
 namespace Gunther\Commands;
 
 use Gunther\Facades\Publisher;
-use Illuminate\Console\Command;
 use Gunther\Services\LangsService;
+use Illuminate\Console\Command;
 use Symfony\Component\Console\Output\OutputInterface;
 
 class UpdateTranslations extends Command
