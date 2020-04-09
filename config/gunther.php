@@ -28,6 +28,6 @@ return [
      * Resulting file format.
      * @see https://support.crowdin.com/files-management/#file-export-settings
      */
-    'resulting_file' => '/resources/lang/%two_letters_code%/%original_file_name%',
+    'resulting_file' => '/master/resources/lang/%two_letters_code%/%original_file_name%',
 
 ];

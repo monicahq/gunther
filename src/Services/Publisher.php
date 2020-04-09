@@ -56,9 +56,9 @@ class Publisher
      * Upload files to crowdin.
      *
      * @param string              $language
-     * @param array[Languagefile] $files
+     * @param array<Languagefile> $files
      */
-    public function upload($language, $files)
+    public function upload($language, $files): void
     {
         foreach ($files as $file) {
             $this->crowdin->translation->upload($file, $language);

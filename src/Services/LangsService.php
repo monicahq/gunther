@@ -26,7 +26,7 @@ class LangsService
     /**
      * Get languages to translate.
      *
-     * @return array[string]
+     * @return array<string>
      */
     public function getLanguages(): array
     {
@@ -44,9 +44,9 @@ class LangsService
      *
      * @param string $language
      *
-     * @return array[Languagefile]
+     * @return array<Languagefile>
      */
-    public function getTranslations($language)
+    public function getTranslations($language): array
     {
         $sourcePath = base_path('vendor/caouecs/laravel-lang/src/'.$language);
 
@@ -73,9 +73,9 @@ class LangsService
      * Get translations for the name of supported locales for the language.
      *
      * @param string        $language
-     * @param array[string] $locale
+     * @param array<string> $locale
      *
-     * @return array[string]
+     * @return array<string, string>
      */
     public function getLocaleTranslations($language, $locales): array
     {
@@ -88,9 +88,8 @@ class LangsService
 
         $langs = [];
         foreach ($locales as $locale) {
-            $translate = array_get($sourceLocales, $locale);
-            if ($translate) {
-                $langs['locale_'.$locale] = $translate;
+            if (isset($sourceLocales[$locale])) {
+                $langs['locale_'.$locale] = $sourceLocales[$locale];
             }
         }
 

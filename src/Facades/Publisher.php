@@ -11,7 +11,7 @@ class Publisher extends IlluminateFacade
      *
      * @return string
      */
-    protected static function getFacadeAccessor()
+    protected static function getFacadeAccessor(): string
     {
         return 'gunther.publisher';
     }

@@ -14,7 +14,7 @@ class ServiceProvider extends BaseServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         $this->registerAndPublishConfigurations();
 
@@ -30,7 +30,7 @@ class ServiceProvider extends BaseServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
         $app = $this->app;
         $app->bind('gunther.publisher', function () use ($app) {
@@ -41,9 +41,9 @@ class ServiceProvider extends BaseServiceProvider
     /**
      * Get the services provided by the provider.
      *
-     * @return array
+     * @return array<string>
      */
-    public function provides()
+    public function provides(): array
     {
         return ['gunther.publisher'];
     }
@@ -53,7 +53,7 @@ class ServiceProvider extends BaseServiceProvider
      *
      * @return void
      */
-    protected function registerAndPublishConfigurations()
+    protected function registerAndPublishConfigurations(): void
     {
         $configFile = __DIR__.'/../../config/gunther.php';
 

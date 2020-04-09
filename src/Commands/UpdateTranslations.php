@@ -28,7 +28,7 @@ class UpdateTranslations extends Command
      *
      * @return void
      */
-    public function handle()
+    public function handle(): void
     {
         $langsService = new LangsService(app()->make('config'));
         $languages = $langsService->getLanguages();

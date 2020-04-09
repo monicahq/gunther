@@ -15,10 +15,20 @@
         }
     ],
     "require": {
-        "caouecs/laravel-lang": "^3.0",
+        "caouecs/laravel-lang": "^6.0",
         "elkuku/crowdin-api": "^2.0",
-        "laravel/framework": "^5.6",
+        "illuminate/console": "^5.6 || ^6.0 || ^7.0",
+        "illuminate/support": "^5.6 || ^6.0 || ^7.0",
         "umpirsky/locale-list": "^1.0"
+    },
+    "require-dev": {
+        "dms/phpunit-arraysubset-asserts": "^0.2.0",
+        "laravel/framework": "^5.6 || ^6.0 || ^7.0",
+        "nunomaduro/larastan": "^0.5",
+        "orchestra/testbench": "^5.0",
+        "phpunit/phpunit": "^8.0 || ^9.0",
+        "thecodingmachine/phpstan-safe-rule": "^1.0",
+        "vimeo/psalm": "^3.9"
     },
     "autoload": {
         "psr-4": {
@@ -37,10 +47,5 @@
         "sort-packages": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "require-dev": {
-        "orchestra/testbench": "~3.0",
-        "phpunit/phpunit": "^7.3",
-        "vimeo/psalm": "^3.0"
-    }
+    "prefer-stable": true
 }
