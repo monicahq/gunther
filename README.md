@@ -14,6 +14,6 @@ php artisan vendor:publish --provider="Gunther\Providers\ServiceProvider" --tag=
 
 ## License
 
-Copyright (c) 2018
+Copyright (c) 2018-2020
 
 Licensed under the AGPL License. [View license](/LICENSE).

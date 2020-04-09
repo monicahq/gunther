@@ -41,7 +41,7 @@ class Publisher
      *
      * @return bool
      */
-    public function languageSupported($language) : bool
+    public function languageSupported($language): bool
     {
         try {
             $status = $this->crowdin->language->getStatus($language);
@@ -56,9 +56,9 @@ class Publisher
      * Upload files to crowdin.
      *
      * @param string              $language
-     * @param array[Languagefile] $files
+     * @param array<Languagefile> $files
      */
-    public function upload($language, $files)
+    public function upload($language, $files): void
     {
         foreach ($files as $file) {
             $this->crowdin->translation->upload($file, $language);

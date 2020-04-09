@@ -2,10 +2,11 @@
 
 namespace Tests\Services;
 
-use Orchestra\Testbench\TestCase;
+use DMS\PHPUnitExtensions\ArraySubset\Assert;
 use Gunther\Services\LangsService;
-use Illuminate\Filesystem\Filesystem;
 use Illuminate\Config\Repository as Config;
+use Illuminate\Filesystem\Filesystem;
+use Orchestra\Testbench\TestCase;
 
 class LangsServiceTest extends TestCase
 {
@@ -27,7 +28,7 @@ class LangsServiceTest extends TestCase
 
         $languages = $service->getLanguages();
 
-        $this->assertArraySubset(['en'], $languages);
+        Assert::assertArraySubset(['en'], $languages);
     }
 
     public function test_get_languages_list()
@@ -36,7 +37,7 @@ class LangsServiceTest extends TestCase
 
         $languages = $service->getLanguages();
 
-        $this->assertArraySubset(['en', 'fr', 'jp'], $languages);
+        Assert::assertArraySubset(['en', 'fr', 'jp'], $languages);
     }
 
     public function test_get_languages_array()
@@ -45,7 +46,7 @@ class LangsServiceTest extends TestCase
 
         $languages = $service->getLanguages();
 
-        $this->assertArraySubset(['en', 'fr', 'jp'], $languages);
+        Assert::assertArraySubset(['en', 'fr', 'jp'], $languages);
     }
 
     public function test_get_translations()
